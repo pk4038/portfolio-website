@@ -16,6 +16,8 @@ WHY DOES NESTING CSS CLASSES WORK HERE??????
 
 */
 
+
+
 * {
   --n-blue: 0, 98, 185;
   --blue: rgba(0, 98, 185, 0.8);
@@ -646,3 +648,146 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+
+/* ---------- DARK MODE BASIC COLORS ---------- */
+
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+/* Header */
+body.dark .header {
+  background: #1c1c1c;
+  box-shadow: none;
+}
+
+body.dark .header__link {
+  color: #eee;
+}
+body.dark .header__link:hover  {
+  color: rgb(167, 69, 212) !important;
+}
+
+/* About section */
+body.dark .about {
+  background: #181818;
+}
+body.dark .about__content-details-para {
+  color: #ccc;
+}
+
+/* Projects section text */
+body.dark .projects__row-content-desc {
+  color: #ccc;
+}
+
+/* Footer */
+body.dark .main-footer {
+  background: #000;
+  color: #fff;
+}
+.theme-toggle {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .header__logo-sub {
+  color: #fff !important;
+}
+
+body.dark .header__logo-container:hover .header__logo-sub {
+  color: rgb(167, 69, 212) !important; 
+}
+
+
+/* -------- DARK MODE BANNER COLORS -------- */
+
+body.dark .home-hero,
+body.dark .contact,
+body.dark .project-cs-hero {
+  background: linear-gradient(
+      to right,
+      rgba(80, 0, 120, 0.8),
+      rgba(120, 0, 180, 0.8)
+    ),
+    url(../../assets/svg/common-bg.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* ------- Dark Mode Buttons ------- */
+
+/* Primary themed buttons */
+body.dark .btn--theme {
+  background: rgba(120, 0, 180, 1);     /* purple accent */
+  color: #fff;
+}
+
+body.dark .btn--theme:hover {
+  background: rgba(150, 0, 220, 1);     /* slightly brighter on hover */
+}
+
+/* Inverted theme button */
+body.dark .btn--theme-inv {
+  background: transparent;
+  color: rgba(150, 0, 220, 1);
+  border: 2px solid rgba(150, 0, 220, 1);
+}
+
+body.dark .btn--theme-inv:hover {
+  background: rgba(66, 15, 90, 0.15);
+}
+
+/* Normal white buttons */
+body.dark .btn {
+  background: rgb(233, 171, 0);
+  color: #eee;
+  box-shadow: none;
+}
+
+body.dark .btn:hover {
+  transform: translateY(-3px);
+  background: rgb(189, 138, 0);
+}
+
+/* Floating theme toggle on the right side */
+.theme-toggle {
+  position: fixed;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+  z-index: 2000;
+
+  /* make icons go top–down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* hover = change background instead of text color */
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* nicer hover in dark mode */
+body.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+/* Dark mode underline color for section titles */
+body.dark .heading-sec__main::after {
+  background: rgba(150, 0, 220, 1) !important;
+}
+
+
+
