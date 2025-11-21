@@ -754,6 +754,12 @@ body.dark .btn {
   color: #eee;
   box-shadow: none;
 }
+body.dark .project-details__links-btn.btn--theme-inv {
+  background: none !important;
+  border-color: rgba(150, 0, 220, 1);
+  color: rgb(255, 255, 255);
+}
+
 
 body.dark .btn:hover {
   transform: translateY(-3px);
